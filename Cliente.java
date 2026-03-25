@@ -29,3 +29,4 @@ public class Cliente {
         System.out.println("Nombre: " + getNombreCompleto());
         System.out.println("Telefono: " + telefono);
     }
+}

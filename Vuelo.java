@@ -19,4 +19,18 @@ public class Vuelo{
         " Hora: " + horaLocalTime + 
         " Precio: $" + precio);
     }
+
+    void aplicarDescuentoPorHorario() {
+        int hora = horaLocalTime.getHour();
+
+        if (hora < 6) {
+            precio *= 0.8;
+            System.out.println("Descuento del 20% por vuelo muy temprano");
+        } else if (hora >= 22) {
+            precio *= 0.85;
+            System.out.println("Descuento del 15% por vuelo nocturno");
+        } else {
+            System.out.println("Este vuelo no tiene descuento");
+        }
+    }
 }
